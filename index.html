@@ -144,7 +144,74 @@
       <option value="oriental">Oriental</option>
     </select>
   </div>
+ <div class="product" data-tipo="amaderado">
+      <img src="https://via.placeholder.com/250x330?text=Oud+Velours" alt="Oud Velours">
+      <h3>Oud Velours</h3>
+      <small>$55.00 | Amaderado</small>
+      <p>Notas: oud camboyano, rosa turca, vainilla. Profundo y sensual, para ocasiones especiales.</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
 
-  <div class="products" id="productos">
-    <div class="product" data-tipo="cítrico">
-      <img src="https://via.placehol
+    <div class="product" data-tipo="oriental">
+      <img src="https://via.placeholder.com/250x330?text=Noir+Amour" alt="Noir Amour">
+      <h3>Noir Amour</h3>
+      <small>$49.00 | Oriental</small>
+      <p>Notas: ámbar, jazmín, canela. Misterioso y seductor, una fragancia envolvente.</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 L’éléganceEssence. Todos los derechos reservados.</p>
+
+  <div style="margin: 15px 0;">
+    <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp" style="margin: 0 10px; color: #25D366;">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://instagram.com/tuusuario" target="_blank" title="Instagram" style="margin: 0 10px; color: #C13584;">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://facebook.com/tuusuario" target="_blank" title="Facebook" style="margin: 0 10px; color: #1877F2;">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+  </div>
+
+  <p>
+    <a href="#">Política de devolución</a> |
+    <a href="#">Contacto</a>
+  </p>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
+<script>
+  const filtro = document.getElementById('filtro');
+  const busqueda = document.getElementById('busqueda');
+  const productos = document.querySelectorAll('.product');
+
+  function filtrar() {
+    const texto = busqueda.value.toLowerCase();
+    const tipo = filtro.value;
+
+    productos.forEach(p => {
+      const nombre = p.querySelector('h3').textContent.toLowerCase();
+      const tipoProducto = p.dataset.tipo;
+
+      const coincideTexto = nombre.includes(texto);
+      const coincideTipo = tipo === 'todos' || tipo === tipoProducto;
+
+      p.style.display = (coincideTexto && coincideTipo) ? 'block' : 'none';
+    });
+  }
+
+  filtro.addEventListener('change', filtrar);
+  busqueda.addEventListener('input', filtrar);
+</script>
+
+</body>
+</html>
+  
