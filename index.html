@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’éléganceEssence | Perfumes Exclusivos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fefcf9;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(to right, #f7e9dc, #fbeee6);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    .btn {
+      background-color: #111;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .search-filter {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .search-filter input,
+    .search-filter select {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 200px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .product {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 1.3em;
+    }
+    .product small {
+      display: block;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .product p {
+      font-size: 0.95em;
+      margin-bottom: 15px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111;
+      color: white;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>L’éléganceEssence 🔥</h1>
+  <p>Perfumes artesanales con carácter. Vive la elegancia en cada nota.</p>
+  <a href="#coleccion" class="btn">Descubre nuestra colección</a>
+</header>
+
+<section class="section" id="coleccion">
+  <div class="search-filter">
+    <input type="text" id="busqueda" placeholder="Buscar perfume...">
+    <select id="filtro">
+      <option value="todos">Todos</option>
+      <option value="cítrico">Cítrico</option>
+      <option value="amaderado">Amaderado</option>
+      <option value="oriental">Oriental</option>
+    </select>
+  </div>
+
+  <div class="products" id="productos">
+    <div class="product" data-tipo="cítrico">
+      <img src="https://via.placehol
