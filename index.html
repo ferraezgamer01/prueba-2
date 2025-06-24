@@ -169,6 +169,13 @@
     </div>
   </div>
 </section>
+  
+  <section class="section testimonials">
+  <h2 style="text-align:center;">Testimonios</h2>
+  <p>"En la primera cita, me preguntaron, que perfume usas 🔥."</p>
+  <p>"Este perfume huele como uno de $200. Increíble."</p>
+  <p>"Lo llevé a una reunión y me preguntaron de dónde era. Un éxito total."</p>
+</section>
 
 <footer>
   <p>&copy; 2025 L’éléganceEssence. Todos los derechos reservados.</p>
@@ -185,39 +192,72 @@
     </a>
   </div>
 
- <p>
-  <a href="#politica">Política de devolución</a> |
+<p>
+  <a href="#" onclick="mostrarPolitica()">Política de devolución</a> |
   <a href="#">Contacto</a>
 </p>
 
-<section class="section" id="politica" style="max-width: 900px; margin: auto;">
-  <h2 style="text-align:center;">🛍️ Política de Devolución</h2>
 
-  <p>En <strong>L’éléganceEssence</strong>, nos esforzamos por ofrecer productos de la más alta calidad. Sin embargo, entendemos que pueden surgir situaciones especiales. A continuación, detallamos nuestra política de devoluciones:</p>
 
-  <h3>✅ Condiciones para aceptar devoluciones:</h3>
-  <ul style="line-height: 1.7;">
-    <li><strong>Solo aceptamos devoluciones por defectos de fábrica.</strong> Esto incluye frascos rotos, atomizadores defectuosos o alteraciones evidentes del contenido.</li>
-    <li><strong>Debe notificarse dentro de los 5 días hábiles</strong> posteriores a la recepción del producto.</li>
-    <li>El producto debe estar <strong>sin uso y en su empaque original</strong>.</li>
-    <li>Debe adjuntarse <strong>evidencia visual (foto o video)</strong> del defecto al contactar a nuestro equipo.</li>
-  </ul>
-
-  <h3>❌ No aceptamos devoluciones por:</h3>
-  <ul style="line-height: 1.7;">
-    <li>Preferencias personales sobre el aroma.</li>
-    <li>Alergias o reacciones individuales.</li>
-    <li>Productos abiertos o utilizados.</li>
-  </ul>
-
-  <h3>📩 ¿Cómo solicitar una devolución?</h3>
-  <p>Contáctanos por WhatsApp o Instagram indicando tu número de pedido y adjuntando las pruebas del defecto. Evaluaremos tu solicitud y te guiaremos en el proceso.</p>
-
-  <p style="text-align:center; font-style: italic; margin-top: 20px;">L’éléganceEssence se reserva el derecho de rechazar devoluciones que no cumplan estas condiciones.</p>
-</section>
 
 
 </footer>
+<div id="politica-modal" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  padding: 40px;
+  box-sizing: border-box;
+">
+  <div style="
+    background: white;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 90vh;
+    position: relative;
+  ">
+    <button onclick="cerrarPolitica()" style="
+      position: absolute;
+      top: 15px; right: 15px;
+      background: #111;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    ">Cerrar ✖</button>
+
+    <h2 style="text-align:center;">🛍️ Política de Devolución</h2>
+
+    <p>En <strong>L’éléganceEssence</strong>, nos esforzamos por ofrecer productos de la más alta calidad. Sin embargo, entendemos que pueden surgir situaciones especiales.</p>
+
+    <h3>✅ Condiciones para aceptar devoluciones:</h3>
+    <ul style="line-height: 1.7;">
+      <li><strong>Solo aceptamos devoluciones por defectos de fábrica.</strong></li>
+      <li>Debe notificarse <strong>dentro de los 5 días hábiles</strong> posteriores a la recepción.</li>
+      <li>El producto debe estar <strong>sin uso y en su empaque original</strong>.</li>
+      <li>Debe presentarse <strong>evidencia visual (foto o video)</strong>.</li>
+    </ul>
+
+    <h3>❌ No aceptamos devoluciones por:</h3>
+    <ul style="line-height: 1.7;">
+      <li>Preferencias personales sobre el aroma.</li>
+      <li>Alergias o reacciones individuales.</li>
+      <li>Productos abiertos o utilizados.</li>
+    </ul>
+
+    <h3>📩 ¿Cómo solicitar una devolución?</h3>
+    <p>Contáctanos por WhatsApp o Instagram indicando tu número de pedido y adjuntando las pruebas del defecto.</p>
+
+    <p style="text-align:center; font-style: italic; margin-top: 20px;">L’éléganceEssence se reserva el derecho de rechazar devoluciones que no cumplan estas condiciones.</p>
+  </div>
+</div>
 
 <!-- Botón flotante de WhatsApp -->
 <a href="https://wa.me/584124789268" class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
@@ -246,6 +286,14 @@
 
   filtro.addEventListener('change', filtrar);
   busqueda.addEventListener('input', filtrar);
+</script>
+<script>
+  function mostrarPolitica() {
+    document.getElementById('politica-modal').style.display = 'block';
+  }
+  function cerrarPolitica() {
+    document.getElementById('politica-modal').style.display = 'none';
+  }
 </script>
 
 </body>
